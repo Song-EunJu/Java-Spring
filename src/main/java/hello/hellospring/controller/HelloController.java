@@ -15,7 +15,7 @@ public class HelloController {
         return "hello";
     }
 
-    @GetMapping("hello-mvc")
+    @GetMapping("hello-mvc") // localhost:8080/hello-mvc?name=spring
     public String helloMvc(@RequestParam(value= "name") String name, Model model){
         model.addAttribute("name",name); // 앞의 name이 key, 뒤의 name은 parameter로 넘어온 값
         return "hello-template";
@@ -29,9 +29,9 @@ public class HelloController {
         return "hello" + name;
     }
 
-    @GetMapping("hello-api")
+    @GetMapping("hello-api") // localhost:8080/hello-api?name=은주
     @ResponseBody
-    public Hello helloApi(@RequestParam("p") String name){
+    public Hello helloApi(String name){
         Hello hello = new Hello();
         hello.setName(name);
         return hello; // json으로 반환
@@ -40,10 +40,11 @@ public class HelloController {
     static class Hello {
         private String abc;
 
-
         public String getName() {
             return abc;
         }
+
+
 
         public void setName(String abc) {
             this.abc = abc;
