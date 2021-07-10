@@ -10,5 +10,4 @@ public interface MemberRepository {
     Optional<Member> findByid(Long id); // 해당 id를 찾았을 때 null인 경우 optional 로 감싸서 반환
     Optional<Member> findByName(String name);
     List<Member> findAll();
-
 }
