@@ -44,8 +44,6 @@ public class HelloController {
             return abc;
         }
 
-
-
         public void setName(String abc) {
             this.abc = abc;
         }

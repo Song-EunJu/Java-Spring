@@ -24,7 +24,7 @@ public class MemoryMemberRepositoryTest {
 
         repository.save(member);
 
-        Member result = repository.findByid(member.getId()).get(); // Optional이 반환타입이기 때문에 get()으로 받아옴
+        Member result = repository.findById(member.getId()).get(); // Optional이 반환타입이기 때문에 get()으로 Member객체를 받아옴
         Assertions.assertEquals(member, result);
         assertThat(member).isEqualTo(result);
     }
