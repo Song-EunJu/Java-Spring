@@ -40,7 +40,7 @@ public class MemberService {
     }
 
     /**
-     *
+     * 특정 회원 조회
      */
     public Optional<Member> findOne(Long memberId){
         return memberRepository.findById(memberId);
