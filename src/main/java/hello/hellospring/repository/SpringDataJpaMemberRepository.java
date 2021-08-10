@@ -7,8 +7,6 @@ import java.util.Optional;
 
 public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository{
 
-    // select m from Member m where m.name = ? 이런식으로 jpql 쿼리를 짜준다.
-    // 메소드 이름을 보고 풀어낸ㄴ 것
     @Override
     Optional<Member> findByName(String name);
 }
